@@ -1,19 +1,29 @@
-import React, { useState } from 'react'
+import React, {} from 'react'
+import {useNavigate} from 'react-router-dom'
+import Users from "./users.json"
 import "./form.css"
 function Form() {
 
+
+
+const  Navigate = useNavigate()
+
 const [input, setinput] = React.useState({email:"",passwd:""}) 
 
-const handlechange = (ev) =>{
+ const handlechange = (ev) =>{
   setinput({...input,[ev.target.name]:ev.target.value})
-}
 
+ }
 const submitter = () =>{
-  console.log(input)
+  console.log()
+    Users.forEach((val)=>{
+        if(val.email === input.email){
+            Navigate("home")
+        }
+    })
 }
-
   return (
-    <div className=''>
+    <div>
         <h2>Login Page</h2><br></br>
         <div class="login">    
     <form id="login" method="get" action="login.php" >    
@@ -36,6 +46,6 @@ const submitter = () =>{
 </div> 
     </div>
   )
-}
 
+}
 export default Form

@@ -1,0 +1,19 @@
+
+.logo img{
+  width: 25%;
+  margin-top: -23px;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.navbar ul{
+  display: flex;
+  text-decoration: none;
+}
+.navbar ul li{
+  padding: 10px 10px;
+  list-style: none;
+  
+}
